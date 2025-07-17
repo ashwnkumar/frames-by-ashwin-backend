@@ -14,7 +14,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "http://192.168.1.40:5173",
+    origin: envConfig.FRONTEND_URL,
     credentials: true,
   })
 );
