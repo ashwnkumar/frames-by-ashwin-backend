@@ -10,6 +10,8 @@ const albumRouter = require("./src/routes/albumRouter");
 
 const app = express();
 
+app.get("/ping", (req, res) => {res.status(200}.send("pong"))
+
 connectDB();
 
 app.use(
