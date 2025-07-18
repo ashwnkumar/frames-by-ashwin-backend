@@ -11,7 +11,7 @@ const upload = require("../middlewares/multer");
 
 const adminRouter = express.Router();
 
-adminRouter.post("/register", register);
+// adminRouter.post("/register", register);
 adminRouter.post("/login", login);
 adminRouter.get("/", getAdmin);
 adminRouter.put(
