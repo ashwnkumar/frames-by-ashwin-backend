@@ -72,7 +72,7 @@ exports.updateAdmin = async (req, res) => {
     if (req.files?.homepage?.[0]?.buffer) {
       await new Promise((resolve, reject) => {
         cloudinary.uploader
-          .upload_stream({ resource_type: "image" }, (error, result) => {
+          .upload_stream({ resource_type: "image",folder: "frames-by-ashwin/admin"}, (error, result) => {
             if (error) return reject(error);
             updated.homePageUrl = result.secure_url;
             updated.homePagePublicId = result.public_id;
@@ -85,7 +85,7 @@ exports.updateAdmin = async (req, res) => {
     if (req.files?.aboutpage?.[0]?.buffer) {
       await new Promise((resolve, reject) => {
         cloudinary.uploader
-          .upload_stream({ resource_type: "image" }, (error, result) => {
+          .upload_stream({ resource_type: "image", folder: "frames-by-ashwin/admin" }, (error, result) => {
             if (error) return reject(error);
             updated.aboutPageUrl = result.secure_url;
             updated.aboutPagePublicId = result.public_id;
