@@ -17,7 +17,7 @@ exports.addPhoto = async (req, res) => {
       return new Promise((resolve, reject) => {
         const stream = cloudinary.uploader.upload_stream(
           {
-            folder: "frames-by-ashwn",
+            folder: "frames-by-ashwin/photos",
             use_filename: true,
             eager: [{ width: 500, quality: "auto", fetch_format: "auto" }],
           },
