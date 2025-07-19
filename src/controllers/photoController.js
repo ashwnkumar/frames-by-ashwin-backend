@@ -104,7 +104,6 @@ exports.getFeaturedPhotos = async (req, res) => {
 };
 
 exports.deletePhoto = async (req, res) => {
-  console.log("first");
   try {
     const { photoId } = req.params;
 
