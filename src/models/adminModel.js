@@ -20,12 +20,18 @@ const adminModel = new mongoose.Schema(
     about: {
       type: String,
     },
-    links: [
-      {
-        title: String,
-        url: String,
-      },
-    ],
+    links: {
+      type: [
+        {
+          title: String,
+          url: String,
+        },
+      ],
+      default: [
+        { title: "Instagram", url: "" },
+        { title: "Mail", url: "" },
+      ],
+    },
     homePageUrl: {
       type: String,
     },

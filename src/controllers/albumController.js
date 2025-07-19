@@ -62,7 +62,7 @@ exports.createAlbum = async (req, res) => {
 exports.getAlbums = async (req, res) => {
   try {
     const albums = await Album.find().sort({ createdAt: -1 });
-    if (!albums || albums.length === 0) {
+    if (!albums) {
       return sendResponse(res, 404, "No albums found.");
     }
 

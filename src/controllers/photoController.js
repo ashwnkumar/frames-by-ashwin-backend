@@ -59,7 +59,7 @@ exports.addPhoto = async (req, res) => {
 exports.getPhotos = async (req, res) => {
   try {
     const result = await Photo.find({ albumId: null }).sort({ createdAt: -1 });
-    if (!result || result.length === 0) {
+    if (!result) {
       return sendResponse(res, 404, "No photos found.");
     }
 
